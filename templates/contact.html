@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}<title>{{ page.title }} | {{ config.title }}</title>{% endblock title %}
+{% block description %}<meta name="description" content="{{ page.description }}">{% endblock description %}
+{% block canonical %}{{ page.permalink }}{% endblock canonical %}
+{% block social %}
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ page.permalink }}">
+{% endblock social %}
+{% block content %}
+<section>
+  <h1 class="page-heading">{{ page.title }}</h1>
+  <article class="prose">
+    {{ page.content | safe }}
+  </article>
+</section>
+{% endblock content %}
