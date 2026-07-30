@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}<title>{{ section.title }} | {{ config.title }}</title>{% endblock title %}
+{% block description %}<meta name="description" content="{{ section.description }}">{% endblock description %}
+{% block social %}
+    <meta property="og:title" content="{{ section.title }}">
+    <meta property="og:description" content="{{ section.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ section.permalink }}">
+{% endblock social %}
+{% block content %}
+<section>
+  <h1 class="page-heading">{{ section.title }}</h1>
+  {% set blog = section %}
+  {% include "partials/post-list.html" %}
+</section>
+{% endblock content %}

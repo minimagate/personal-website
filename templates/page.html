@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}<title>{{ page.title }} | {{ config.title }}</title>{% endblock title %}
+{% block description %}<meta name="description" content="{{ page.description }}">{% endblock description %}
+{% block canonical %}{{ page.permalink }}{% endblock canonical %}
+{% block social %}
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="{{ page.permalink }}">
+    <meta property="article:published_time" content="{{ page.date }}">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:description" content="{{ page.description }}">
+{% endblock social %}
+{% block content %}
+<section>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": {{ page.title | json_encode() | safe }},
+      "datePublished": "{{ page.date }}",
+      "dateModified": "{{ page.updated | default(value=page.date) }}",
+      "description": {{ page.description | json_encode() | safe }},
+      "url": "{{ page.permalink }}",
+      "author": {"@type": "Person", "name": "{{ config.author }}"}
+    }
+  </script>
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-meta">
+    <time datetime="{{ page.date }}">{{ page.date | date(format="%B %-d, %Y") }}</time>
+  </div>
+  <article class="prose">
+    {{ page.content | safe }}
+  </article>
+</section>
+{% endblock content %}
+

@@ -1,12 +1,10 @@
 base_url = "https://minimagate.github.io/personal-website"
 title = "Michelangelo Gubinelli"
-description = "Founder at Logven and mathematics student."
+description = "Designer, developer, founder at Logven, and mathematics student."
 default_language = "en"
 author = "Michelangelo Gubinelli"
 compile_sass = false
 minify_html = true
-generate_feeds = true
-feed_filenames = ["rss.xml"]
 
 [markdown]
 smart_punctuation = true
@@ -14,4 +12,3 @@ smart_punctuation = true
 [extra]
 github = "https://github.com/minimagate"
 logven = "https://logven.com"
-

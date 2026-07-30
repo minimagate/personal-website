@@ -3,11 +3,10 @@
 {% block content %}
 <section>
   <h1 class="page-heading">Michelangelo Gubinelli</h1>
-  <p class="intro">I'm 20, founder at <a href="{{ config.extra.logven }}">Logven</a>, and studying mathematics in college.</p>
+  <p class="intro">I'm 20, a designer and developer, founder at <a href="{{ config.extra.logven }}">Logven</a>, and studying mathematics in college.</p>
   <div class="post-list-wrap">
     {% set blog = get_section(path="blog/_index.md") %}
     {% include "partials/post-list.html" %}
   </div>
 </section>
 {% endblock content %}
-
