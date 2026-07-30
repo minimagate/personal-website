@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block title %}<title>{{ config.title }}</title>{% endblock title %}
+    {% block description %}<meta name="description" content="{{ config.description }}">{% endblock description %}
+    <meta name="author" content="{{ config.author }}">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:site_name" content="{{ config.title }}">
+    <meta property="og:locale" content="en_US">
+    {% block social %}
+    <meta property="og:title" content="{{ config.title }}">
+    <meta property="og:description" content="{{ config.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ config.base_url }}">
+    {% endblock social %}
+    <link rel="canonical" href="{% block canonical %}{{ current_url | default(value=config.base_url) }}{% endblock canonical %}">
+    <link rel="alternate" type="application/rss+xml" title="{{ config.title }} RSS" href="{{ get_url(path='rss.xml', trailing_slash=false) }}">
+    <link rel="stylesheet" href="{{ get_url(path='styles/site.css', trailing_slash=false) }}">
+  </head>
+  <body>
+    <main>
+      {% include "partials/nav.html" %}
+      {% block content %}{% endblock content %}
+      {% include "partials/footer.html" %}
+    </main>
+  </body>
+</html>
+
