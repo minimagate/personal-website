@@ -1,5 +1,5 @@
 +++
-title = "when the room is in motion"
+title = "When the room is in motion"
 description = "On uncertainty, progress, and making choices while the world refuses to stand still."
 date = 2026-07-30
 authors = ["Michelangelo Gubinelli"]
@@ -16,4 +16,3 @@ By the time tomorrow arrives, our greatest ideas will already be dead and buried
 In a world that lives and changes so fast, how can we be sure we won’t find ourselves in the same spot after a thousand years of chaotically trying to move forward?
 
 In this collection of short dissertations, we’ll try to find reasonable answers to these questions. We’ll probably find none, but at least I hope the room isn’t quite so much in motion anymore.
-
