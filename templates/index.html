@@ -4,9 +4,26 @@
 <section>
   <h1 class="page-heading">Michelangelo Gubinelli</h1>
   <p class="intro">I'm 20yo designer and developer, founder at Logven, and studying mathematics in college.</p>
+  
   <div class="post-list-wrap">
-    {% set blog = get_section(path="blog/_index.md") %}
-    {% include "partials/post-list.html" %}
+    {% set projects = get_section(path="projects/_index.md") %}
+    {% include "partials/projects-list.html" %}
+  </div>
+
+  <div class="post-list-wrap">
+    {% set all_blog = get_section(path="blog/_index.md") %}
+    <div class="post-list">
+      {% for post in all_blog.pages %}
+        {% if post.extra.project is not defined %}
+        <a class="post-link" href="{{ post.permalink }}">
+          <div class="post-row">
+            <time datetime="{{ post.date }}">{{ post.date | date(format="%B %-d, %Y") }}</time>
+            <p>{{ post.title }}</p>
+          </div>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 {% endblock content %}

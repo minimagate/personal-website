@@ -1,0 +1,10 @@
+<div class="post-list">
+  {% for project in projects.pages %}
+  <a class="post-link" href="{{ project.permalink }}">
+    <div class="post-row">
+      <div class="project-category">{{ project.extra.category | default(value="Project") }}</div>
+      {{ project.title }}
+    </div>
+  </a>
+  {% endfor %}
+</div>

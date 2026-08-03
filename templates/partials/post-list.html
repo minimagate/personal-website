@@ -3,7 +3,7 @@
   <a class="post-link" href="{{ post.permalink }}">
     <div class="post-row">
       <time datetime="{{ post.date }}">{{ post.date | date(format="%B %-d, %Y") }}</time>
-      <p>{{ post.title }}</p>
+      {{ post.title }}
     </div>
   </a>
   {% endfor %}
