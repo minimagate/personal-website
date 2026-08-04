@@ -15,23 +15,5 @@
   <article class="prose">
     {{ page.content | safe }}
   </article>
-  <div class="post-list-wrap">
-    {% set blog = get_section(path="blog/_index.md") %}
-    <div class="post-list">
-      {% for post in blog.pages %}
-        {% if post.extra.project is defined and post.extra.project == page.slug %}
-        <a class="post-link" href="{{ post.permalink }}">
-          <div class="post-row">
-            <time datetime="{{ post.date }}">{{ post.date | date(format="%B %-d, %Y") }}</time>
-            <p>{{ post.title }}</p>
-          </div>
-        </a>
-        {% endif %}
-      {% endfor %}
-    </div>
-    {% if not blog.pages %}
-    <p>No posts yet for this project.</p>
-    {% endif %}
-  </div>
 </section>
 {% endblock content %}

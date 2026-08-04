@@ -14,14 +14,12 @@
     {% set all_blog = get_section(path="blog/_index.md") %}
     <div class="post-list">
       {% for post in all_blog.pages %}
-        {% if post.extra.project is not defined %}
         <a class="post-link" href="{{ post.permalink }}">
           <div class="post-row">
             <time datetime="{{ post.date }}">{{ post.date | date(format="%B %-d, %Y") }}</time>
             <p>{{ post.title }}</p>
           </div>
         </a>
-        {% endif %}
       {% endfor %}
     </div>
   </div>

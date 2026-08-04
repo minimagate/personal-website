@@ -1,9 +1,9 @@
 <div class="post-list">
-  {% for post in blog.pages %}
+  {% for post in section.pages %}
   <a class="post-link" href="{{ post.permalink }}">
     <div class="post-row">
       <time datetime="{{ post.date }}">{{ post.date | date(format="%B %-d, %Y") }}</time>
-      {{ post.title }}
+      <p>{{ post.title }}</p>
     </div>
   </a>
   {% endfor %}
