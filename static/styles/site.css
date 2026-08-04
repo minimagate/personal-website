@@ -51,6 +51,7 @@ p, h1, h2, h3, h4, ul, ol { margin-top: 0; }
 .page-heading, .post-title { margin-bottom: 2rem; font-size: 1.5rem; line-height: 2rem; font-weight: 600; letter-spacing: -.05em; }
 .post-title { margin-bottom: 0; text-wrap: balance; }
 .intro { margin-bottom: 1rem; }
+.quote { margin-bottom: 1rem; font-style: italic; }
 .intro a { text-decoration: underline; text-decoration-color: #a3a3a3; text-decoration-thickness: .1em; text-underline-offset: 2px; }
 .post-list-wrap { margin: 2rem 0; }
 .post-link { display: flex; flex-direction: column; margin-bottom: 1rem; }
