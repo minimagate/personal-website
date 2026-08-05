@@ -9,8 +9,8 @@ A comprehensive reference for AI agents and developers working on this project.
 - **Site**: [minimagate.github.io/personal-website](https://minimagate.github.io/personal-website)
 - **Author**: Michelangelo Gubinelli
 - **Stack**: [Zola](https://www.getzola.org/) static site generator (v0.19+), [Tera](https://keats.github.io/tera/) templates, vanilla CSS
-- **Fonts**: Geist Sans + Geist Mono (subset as woff2, local only)
-- **License**: Geist fonts under [GEIST.txt](LICENSES/GEIST.txt)
+- **Fonts**: Poppins + Geist Mono (Latin subsets as woff2, local only)
+- **Licenses**: Poppins under [POPPINS.txt](LICENSES/POPPINS.txt), Geist Mono under [GEIST.txt](LICENSES/GEIST.txt)
 
 The site is a minimalist personal portfolio with a blog, project showcase, and contact page. All pages are static, server-rendered at build time by Zola.
 
@@ -47,10 +47,13 @@ The site is a minimalist personal portfolio with a blog, project showcase, and c
 ├── static/                    # Static assets served as-is
 │   ├── styles/site.css        # All styles, single file
 │   └── fonts/
-│       ├── geist-sans.woff2
+│       ├── poppins-regular.woff2
+│       ├── poppins-medium.woff2
+│       ├── poppins-semibold.woff2
 │       └── geist-mono.woff2
 └── LICENSES/
-    └── GEIST.txt              # Font license
+    ├── GEIST.txt              # Geist Mono license
+    └── POPPINS.txt            # Poppins license
 ```
 
 **Note**: `public/` is the Zola build output directory. It is gitignored and should never be committed or edited directly.
@@ -230,7 +233,7 @@ All styles live in a single file: `static/styles/site.css`.
 - **Background**: `#fff`
 - **Text**: Primary `#171717`, Secondary `#262626`, Muted `#525252`, Subtle `#737373`
 - **Accent**: Selection highlight `#47a3f3`
-- **Font family**: Geist (sans-serif variable font) + Geist Mono (code)
+- **Font family**: Poppins (sans-serif) + Geist Mono (code)
 - **Max width**: `36rem` (≈576px) for body content
 - **Spacing**: Based on `rem` units; margins use `1rem` / `2rem` / `4rem`
 - **Breakpoints**: `768px` (tablet, row layouts), `1024px` (desktop centering)
@@ -317,7 +320,7 @@ The site is deployed to GitHub Pages at `minimagate.github.io/personal-website`.
 - No CSS preprocessing (Sass is disabled in zola.toml).
 - No CSS framework or utility library.
 - Prefer existing utility classes (`.prose`, `.post-row`, `.post-link`, `.intro`) over creating new ones.
-- Use the Geist variable font for all text; Geist Mono for code.
+- Use Poppins for all proportional text; Geist Mono for code.
 
 ---
 
